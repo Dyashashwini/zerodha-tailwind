@@ -1,6 +1,6 @@
 <div class="w-full fixed h-16">
   <nav
-    class="w-full h-full navbar px-16 border-b-1 border-[#e0dddd] flex justify-between bg-white"
+    class="w-full h-full navbar px-4 xl:px-16 border-b-1 border-[#e0dddd] flex justify-between bg-white"
   >
     <div class="flex items-center w-28 cursor-pointer">
       <img
@@ -18,26 +18,14 @@
           <li class="p-4">Products</li>
           <li class="p-4">Pricing</li>
           <li class="p-4">Support</li>
-          <!-- <li class="p-4 mt-1" (click)="showPopup()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="22"
-            viewBox="0 -960 960 960"
-            width="22"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
-          </svg>
-        </li> -->
         </ul>
       </div>
       <div class="p-4 mt-1" (click)="showPopup()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="22"
+          height="26"
           viewBox="0 -960 960 960"
-          width="22"
+          width="26"
         >
           <path
             d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
@@ -49,14 +37,28 @@
     <!-- POP UP -->
     <div
       *ngIf="open"
-      class="pop-up shadow shadow-black-500/50 w-6/12 bg-white transition-all ease-in absolute z-100 border-1 rounded-sm"
+      class="pop-up shadow-xl shadow-black-500/50 bg-white transition-all ease-in absolute  right-0 lg:right-16 md:right-10 z-100 border-1 rounded-sm"
     >
+
+    <!-- Navbar lists -->
+    <div class="border-b-1 block md:hidden  ">
+      <img class="absolute right-0 pt-2 px-6 cursor-pointer" src="assets/images/close.svg" width="80px"  alt="Close" (click)="showPopup()">
+        <ul class="w-auto grid grid-cols-2 py-3 px-8">
+          <li class="p-2 text-base">SignUp</li>
+          <li class="p-2 text-base">About</li>
+          <li class="p-2 text-base">Products</li>
+          <li class="p-2 text-base">Pricing</li>
+          <li class="p-2 text-base">Support</li>
+        </ul>
+    </div>
+
       <div class="px-5 py-8">
-        <div class="grid grid-rows-1 grid-cols-4 gap-x-6 cursor-pointer">
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-x-6 cursor-pointer">
+
           <!-- KITE -->
-          <div class="group flex flex-col items-center">
+          <div class="group flex p-1 md:p-0 md:flex-col items-center w-fit ">
             <img
-              class="group-hover:opacity-85"
+              class="group-hover:opacity-85 kite-img"
               width="50px"
               height="50px"
               src="https://zerodha.com/static/images/products/kite-logo.svg"
@@ -66,13 +68,13 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Kite</span
             >
-            <span class="py-1 text-sm text-dove-gray">Trading platform</span>
+            <span class="py-1 text-sm text-dove-gray hidden md:block ">Trading platform</span>
           </div>
 
           <!-- CONSOLE -->
           <div class="group flex-center items-center">
             <img
-              class="group-hover:opacity-85"
+              class="group-hover:opacity-85 kite-img"
               width="50px"
               height="50px"
               src="https://zerodha.com/static/images/products/console.svg"
@@ -82,13 +84,13 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Console</span
             >
-            <span class="py-1 text-sm text-dove-gray">Backoffice</span>
+            <span class="py-1 text-sm text-dove-gray hidden md:block">Backoffice</span>
           </div>
 
           <!-- KITE CONNECT -->
           <div class="group flex-center hover:text-curious-blue">
             <img
-              class="group-hover:opacity-85"
+              class="group-hover:opacity-85 kite-img"
               width="50px"
               height="50px"
               src="https://zerodha.com/static/images/products/kite-connect.svg"
@@ -98,13 +100,13 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Kite Connect</span
             >
-            <span class="py-1 text-sm text-dove-gray">Trading APIs</span>
+            <span class="py-1 text-sm text-dove-gray hidden md:block">Trading APIs</span>
           </div>
 
           <!-- COIN -->
           <div class="group flex-center hover:text-curious-blue">
             <img
-              class="group-hover:opacity-85"
+              class="group-hover:opacity-85 kite-img"
               width="50px"
               height="50px"
               src="https://zerodha.com/static/images/products/coin.svg"
@@ -114,14 +116,47 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Coin</span
             >
-            <span class="py-1 text-sm text-dove-gray">Mutual Funds</span>
+            <span class="py-1 text-sm text-dove-gray hidden md:block">Mutual Funds</span>
           </div>
+
+          <!-- START -->
+          <!-- Show varsity and trading on the medium screen size -->
+          <!-- VARSITY -->
+          <div class="group p-1 flex hover:text-curious-blue items-center block md:hidden">
+            <img
+              class="group-hover:opacity-85 varsity-img"
+              width="50px"
+              height="50px"
+              src="https://zerodha.com/static/images/products/varsity.png"
+              alt=""
+            />
+            <span
+              class="px-2 group-hover:text-curious-blue text-dove-gray font-medium"
+              >varsity</span>
+          </div>
+
+          <!-- Trading Q & A -->
+          <div class="group p-1 flex hover:text-curious-blue items-center  block md:hidden">
+            <img
+              class="group-hover:opacity-85 varsity-img"
+              width="50px"
+              height="50px"
+              src="https://zerodha.com/static/images/products/tqna.png"
+              alt=""
+            />
+            <span
+              class="px-2 group-hover:text-curious-blue text-dove-gray font-medium"
+              >Trading Q&A</span>
+          </div>
+
+          <!-- END -->
         </div>
       </div>
 
-      <div class="py-10 px-12 bg-[#fafafb]">
+      <div class="py-10 px-12 bg-[#fafafb] rounded-b">
         <!-- UTILITIES -->
-        <div class="grid grid-rows-1 grid-cols-3 w-fit gap-x-2">
+        <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 md:w-fit md:gap-x-10 md:gap-x-2  ">
+          <!-- <div class="flex  "> -->
           <div class="">
             <h2 class="text-lg font-medium mb-3">Utilities</h2>
             <ul
@@ -146,8 +181,8 @@
             </ul>
           </div>
 
-          <!-- EDUCATION -->
-          <div>
+          <!-- EDUCATION and hide on medium screen on this tile-->
+          <div class="hidden md:block">
             <h2 class="text-lg font-medium mb-5">Education</h2>
             <div class="grid grid-rows-1 grid-cols-2 cursor-pointer">
               <div class="group">
