@@ -2,3 +2,14 @@
   color: #387ed1;
 }
 
+@media screen and (max-width:768px){
+  .trofy-img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:930px){
+  .explore {
+    flex-direction: column;
+  }
+}
