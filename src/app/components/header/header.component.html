@@ -2,25 +2,25 @@
   <nav
     class="w-full h-full navbar px-4 xl:px-16 border-b-1 border-[#e0dddd] flex justify-between bg-white"
   >
-    <div class="flex items-center w-28 cursor-pointer">
-      <img
+    <div class="flex items-center cursor-pointer">
+      <!-- <img
         src="https://zerodha.com/static/images/logo.svg"
         alt="zerodha"
-        class="max-h-4"
-      />
+        class="mdl:max-h-4 max-h-5 h-auto"
+      /> -->
     </div>
 
     <div class="flex items-center text-base cursor-pointer">
-      <div class="hidden md:block">
+      <div class="hidden mdl:block text-dove-gray">
         <ul class="list-none flex items-center justify-between">
-          <li class="p-4">SignUp</li>
-          <li class="p-4">About</li>
-          <li class="p-4">Products</li>
+          <li class="p-4 hover:text-curious-blue"><a routerLink="/">Signup</a></li>
+          <li class="p-4"><a routerLink="/about">About</a></li>
+          <li class="p-4"><a routerLink="/products">Products</a></li>
           <li class="p-4">Pricing</li>
           <li class="p-4">Support</li>
         </ul>
       </div>
-      <div class="p-4 mt-1" (click)="showPopup()">
+      <div class="p-4 mt-1" (click)="showPopup()" >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="26"
@@ -41,22 +41,22 @@
     >
 
     <!-- Navbar lists -->
-    <div class="border-b-1 block md:hidden  ">
+    <div class="border-b-1 block mdl:hidden">
       <img class="absolute right-0 pt-2 px-6 cursor-pointer" src="assets/images/close.svg" width="80px"  alt="Close" (click)="showPopup()">
         <ul class="w-auto grid grid-cols-2 py-3 px-8">
-          <li class="p-2 text-base">SignUp</li>
-          <li class="p-2 text-base">About</li>
-          <li class="p-2 text-base">Products</li>
-          <li class="p-2 text-base">Pricing</li>
-          <li class="p-2 text-base">Support</li>
+          <li class="p-2 text-base"  (click)="closePopupOnNavigatePage()"><a routerLink="/">SignUp</a></li>
+          <li class="p-2 text-base" (click)="closePopupOnNavigatePage()"><a routerLink="/about">About</a></li>
+          <li class="p-2 text-base" (click)="closePopupOnNavigatePage()"> <a routerLink="/products">Products</a></li>
+          <li class="p-2 text-base" (click)="closePopupOnNavigatePage()">Pricing</li>
+          <li class="p-2 text-base" (click)="closePopupOnNavigatePage()">Support</li>
         </ul>
     </div>
 
       <div class="px-5 py-8">
-        <div class="grid md:grid-cols-4 grid-cols-2 gap-x-6 cursor-pointer">
+        <div class="grid mdl:grid-cols-4 grid-cols-2 gap-x-6 cursor-pointer">
 
           <!-- KITE -->
-          <div class="group flex p-1 md:p-0 md:flex-col items-center w-fit ">
+          <div class="group flex p-1 md:p-0 mdl:flex-col items-center w-fit ">
             <img
               class="group-hover:opacity-85 kite-img"
               width="50px"
@@ -68,7 +68,7 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Kite</span
             >
-            <span class="py-1 text-sm text-dove-gray hidden md:block ">Trading platform</span>
+            <span class="py-1 text-sm text-dove-gray hidden mdl:block ">Trading platform</span>
           </div>
 
           <!-- CONSOLE -->
@@ -84,7 +84,7 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Console</span
             >
-            <span class="py-1 text-sm text-dove-gray hidden md:block">Backoffice</span>
+            <span class="py-1 text-sm text-dove-gray hidden mdl:block">Backoffice</span>
           </div>
 
           <!-- KITE CONNECT -->
@@ -100,7 +100,7 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Kite Connect</span
             >
-            <span class="py-1 text-sm text-dove-gray hidden md:block">Trading APIs</span>
+            <span class="py-1 text-sm text-dove-gray hidden mdl:block">Trading APIs</span>
           </div>
 
           <!-- COIN -->
@@ -116,7 +116,7 @@
               class="group-hover:text-curious-blue text-dove-gray font-medium"
               >Coin</span
             >
-            <span class="py-1 text-sm text-dove-gray hidden md:block">Mutual Funds</span>
+            <span class="py-1 text-sm text-dove-gray hidden mdl:block">Mutual Funds</span>
           </div>
 
           <!-- START -->

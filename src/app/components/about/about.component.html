@@ -1,0 +1,114 @@
+<div class=" md:px-16 px-4 text-42-gray">
+  <div
+    class="mdl:mx-5 text-center font-semibold md:pt-28 pt-12 md:pb-28 pb-12 border-b-1"
+    style="font-size: 2rem"
+  >
+    <h2>We pioneered the discount broking model in India.</h2>
+    <h2>Now, we are breaking ground with our technology.</h2>
+  </div>
+
+  <div
+    class="grid md:grid-cols-2 grid-cols-1 gap-y-6 md:gap-x-12 text-base md:mt-24 mt-6 lg:mx-28 md:mx-4"
+    style="line-height: 1.8rem"
+  >
+    <div class="[&>*]:mb-5">
+      <p>
+        We kick-started operations on the 15th of August, 2010 with the goal of
+        breaking all barriers that traders and investors face in India in terms
+        of cost, support, and technology. We named the company Zerodha, a
+        combination of Zero and "Rodha", the Sanskrit word for barrier.
+      </p>
+      <p>
+        Today, our disruptive pricing models and in-house technology have made
+        us the biggest stock broker in India.
+      </p>
+      <p>
+        Over 1+ Crore clients place millions of orders every day through our
+        powerful ecosystem of investment platforms, contributing over 15% of all
+        Indian retail trading volumes.
+      </p>
+    </div>
+
+    <div class="[&>*]:mb-5">
+      <p>
+        In addition, we run a number of popular open online educational and
+        community initiatives to empower retail traders and investors.
+      </p>
+      <p>
+        <a href="" class="text-curious-blue hover:text-black font-semibold"
+          >Rainmatter</a
+        >, our fintech fund and incubator, has invested in several fintech
+        startups with the goal of growing the Indian capital markets.
+      </p>
+      <p>
+        And yet, we are always up to something new every day. Catch up on the
+        latest updates on our
+        <a href="" class="text-curious-blue hover:text-black font-semibold"
+          >blog</a
+        >
+        or see what the media is
+        <a href="" class="text-curious-blue hover:text-black font-semibold"
+          >saying about us</a
+        >.
+      </p>
+    </div>
+  </div>
+
+  <div class="md:mt-20 mt-10 lg:mx-36 md:mx-4">
+    <div class="text-center font-semibold text-3xl mb-10">People</div>
+    <!-- grid grid-cols-2 -->
+    <div class="gap-x-24 flex md:flex-row flex-col justify-between">
+      <div class="text-center flex flex-col items-center" style="width: 100%;">
+        <img
+          src="https://zerodha.com/static/images/nithin-kamath.jpg"
+          alt="Founder"
+          style="border-radius: 100%"
+          class="w-1/2 md:w-full"
+        />
+        <p class="text-xl mt-6 font-medium">Nithin Kamath</p>
+        <p class="mt-4">Founder, CEO</p>
+      </div>
+
+      <div class="[&>*]:mb-5" style="font-size: 1rem">
+        <p>
+          Nithin bootstrapped and founded Zerodha in 2010 to overcome the
+          hurdles he faced during his decade long stint as a trader. Today,
+          Zerodha has changed the landscape of the Indian broking industry.
+        </p>
+        <p>
+          He is a member of the SEBI Secondary Market Advisory Committee (SMAC)
+          and the Market Data Advisory Committee (MDAC).
+        </p>
+        <p>Playing basketball is his zen.</p>
+        <p>Connect on
+          <a href="" class="text-curious-blue hover:text-black font-semibold">Homepage</a> /
+          <a href="" class="text-curious-blue hover:text-black font-semibold"> TradingQnA</a> /
+          <a href="" class="text-curious-blue hover:text-black font-semibold"> Twitter</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-20 lg:mx-16 md:mx-4">
+    <div class="grid md:grid-cols-3 grid-cols-1 md:gap-x-32 gap-y-20 flex-wrap founders" >
+      <div class="flex flex-col items-center text-center" *ngFor="let founder of founders;let i=index ">
+        <img [src]="founder.image"
+            alt=""
+            style="border-radius: 100%;"
+            class="mb-4">
+        <p class="text-xl text-black mb-1">{{founder.name}}</p>
+        <p class="mb-1">{{founder.role}}</p>
+        <p class="font-medium text-dove-gray cursor-pointer" (click)="showIndexed(i)" (keydown)="showIndexed(i)">
+          <a class="flex justify-center items-center">
+            Bio
+            <svg [ngStyle]="{'transform':showIndex[i]?'rotate(180deg)':''}" class="mt-1" xmlns="http://www.w3.org/2000/svg" fill="#666" height="18" viewBox="0 -960 960 960" width="18"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+          </a>
+        </p>
+        <p class="text-left mt-4 px-6 founders-bio" style="font-size: 1rem; line-height: 1.8;"  *ngIf="showIndex[i]">
+          {{founder.bio}}
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

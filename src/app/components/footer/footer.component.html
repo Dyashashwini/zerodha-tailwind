@@ -1,11 +1,11 @@
-<div class="container-fluid px-10 bg-[#fafafb]">
+<div class="container-fluid lg:px-7 px-4 bg-[#fafafb]">
   <!-- first Footer -->
   <div
-    class="mt-24 md:px-10 px-0 py-10  grid grid-rows-1 md:grid-cols-4 grid-col-1 text-left gap-x-6"
+    class="mt-24 lg:px-10 px-0 py-10  grid grid-rows-1 md:grid-cols-4 grid-col-1 text-left gap-x-6"
   >
     <div class="h-3/5 flex-col justify-between">
       <img
-        class="max-h-4"
+        class="md:max-h-4 max-h-5"
         src="https://zerodha.com/static/images/logo.svg"
         alt=""
       />
@@ -14,55 +14,40 @@
         <p class="text-sm">All rights reserved.</p>
       </div>
 
-      <ul class="md:w-5/6 w-fit gap-x-4 md:gap-x-0 flex justify-between">
-        <li class="max-h-5">
-          <a>
+      <ul class="md:w-5/6 w-fit gap-x-4 md:gap-x-0 flex lg:justify-between flex-wrap">
+        <li class="max-h-5 lg:mr-0 mr-4 mb-3">
+          <a class="w-fit flex justify-center">
             <img
               class="h-full"
+              width="22px"
               src="https://zerodha.com/static/images/x-twitter.svg"
               alt=""
             />
           </a>
         </li>
-        <li class="max-h-5">
+        <li class="max-h-5 lg:mr-0 mr-4">
           <a>
-            <img
-              class="h-full"
-              src="https://zerodha.com/static/images/x-twitter.svg"
-              alt=""
-            />
+            <fa-icon class="flex items-start text-dove-gray" [icon]="faFacebook"></fa-icon>
           </a>
         </li>
-        <li class="max-h-5">
+        <li class="max-h-5 lg:mr-0 mr-4">
           <a>
-            <img
-              class="h-full"
-              src="https://zerodha.com/static/images/x-twitter.svg"
-              alt=""
-            />
+            <fa-icon class="flex items-start text-dove-gray" [icon]="faInsta"></fa-icon>
           </a>
         </li>
-        <li class="max-h-5">
+        <li class="max-h-5 lg:mr-0 mr-3">
           <a>
-            <img
-              class="h-full"
-              src="https://zerodha.com/static/images/x-twitter.svg"
-              alt=""
-            />
+            <fa-icon class="flex items-start text-dove-gray" [icon]="faLinkedIn"></fa-icon>
           </a>
         </li>
-        <li class="max-h-5">
+        <li class="max-h-5 lg:mr-0 mr-3">
           <a>
-            <img
-              class="h-full"
-              src="https://zerodha.com/static/images/x-twitter.svg"
-              alt=""
-            />
+            <fa-icon class="flex items-start text-dove-gray" [icon]="faTelegram"></fa-icon>
           </a>
         </li>
         <li>
           <a>
-            <img src="https://zerodha.com/static/images/youtube.svg" alt="" />
+            <img src="https://zerodha.com/static/images/youtube.svg" alt="youtube" />
           </a>
         </li>
       </ul>
@@ -149,7 +134,7 @@
 
   <!-- Second Footer -->
 
-  <div class="md:mt-16 mt-10 text-xs md:px-10 px-0 pb-6 text-justify text-dove-gray">
+  <div class="md:mt-16 mt-10 text-xs lg:px-10 px-0 pb-6 text-justify text-dove-gray">
     <span class="mb-5 inline-block">
       Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.:
       INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. –
@@ -160,10 +145,10 @@
       Bengaluru - 560078, Karnataka, India. For any complaints pertaining to
       securities broking please write to
       <a href="" class="text-curious-blue hover:text-black cursor-pointer"
-        >complaints@zerodha.com</a
+        >complaints&#x40;zerodha.com</a
       >, for DP related to
       <a href="" class="text-curious-blue hover:text-black cursor-pointer"
-        >dp@zerodha.com</a
+        >dp&#x40;zerodha.com</a
       >. Please ensure you carefully read the Risk Disclosure Document as
       prescribed by SEBI | ICF
     </span>

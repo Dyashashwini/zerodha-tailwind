@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'zerodha';
+
+  isLoading: boolean = true;
+
+  // constructor() {
+  //   // Simulate a delay for loading
+  //   setTimeout(() => {
+  //     this.isLoading = false;
+  //   }, 10000); // Adjust the delay as needed
+  // }
 }

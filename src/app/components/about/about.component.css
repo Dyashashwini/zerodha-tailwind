@@ -1,0 +1,16 @@
+/* div {
+  transform: rotate(180deg);
+} */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .founders {
+    /* grid-template-columns: auto auto; */
+    /* column-gap: 2rem; */
+  }
+  .founders-bio {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+}

@@ -2,10 +2,20 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    container: {
+      center: true,
+    },
+    screens: {
+      md: "768px",
+      mdl: "960px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
       colors: {
         "curious-blue": "#387ED1",
         "dove-gray": "#666666",
+        "42-gray": "#424242",
       },
       zIndex: {
         0: "0",

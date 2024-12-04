@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,7 @@ import { Component, ElementRef, HostListener } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef,private router:Router) {}
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent): void {
@@ -38,6 +39,10 @@ export class HeaderComponent {
   open: boolean = false;
   showPopup() {
     this.open = !this.open;
+  }
+
+  closePopupOnNavigatePage(){
+    this.open=false;
   }
 
   preventClose(event: MouseEvent) {
